@@ -659,6 +659,7 @@ def damageCalulator( pokemonA, pokemonB,move):
     modifier = weatherbooster * stab * effectiveVariable
     totalDamage = eight * modifier
 
-    return totalDamage
+    print(pokemonC.getName(),  "will do",totalDamage,"damage to ",pokemonD.getName(),"using move",move)
 
-print(damageCalulator(pokemonC,pokemonD,"fly"))
+
+damageCalulator(pokemonC,pokemonD,"fly")
