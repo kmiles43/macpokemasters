@@ -401,7 +401,12 @@ wrap =  {"name": "wrap",
 
 
 moves = [absorb,acid,auroraBeam,blizzard,bodySlam,boneClub,bodySlam,bonemerang,bubble,
-         bubbleBeam,confusion,crabhammer,cut,dig,dizzyPunch,doubleKick,doubleEdge,drillPeck]
+         bubbleBeam,confusion,crabhammer,cut,dig,dizzyPunch,doubleKick,doubleEdge,drillPeck,earthquake,eggbomb,ember,explosion,fireBlast,firePunch,fireSpin,flamethrower,fly,gust,
+         headbutt,highJumpKick,hornAttack,hydroPump,hyperBeam,hyperFang,iceBeam,icePunch,jumpKick,karateChop,leechLife,lick,megaDrain,megaKick,megaPunch,payDay,peck,
+         petalDance,pinMissile,poisonSting,pound,psybeam,psychic,rage,razorLeaf,razorWind,rockSlide,rockThrow,rollingKick,scratch,selfDestruct,skullBash,skyAttack,slam,slash,
+         sludge,smog,solarBeam,spikeCannon,stomp,strength,struggle,submission,surf,swift,tackle,takeDown,thrash,thunder,thunderbolt,thunderPunch,thunderShock,triAttack,twineedle,
+         waterfall,waterGun,wingAttack,wrap,vineWhip,viceGrip,]
+
 
 
 typeList = ["normal","fight","flying","poison","ground","rock","bug","bug","ghost","fire","water","grass","electric","psychic","ice","dragon"]
@@ -418,9 +423,17 @@ pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
 
 def damageCalulator( pokemonA, pokemonB,move):
 
-    moveType = input("What is the type of the move:")
-    power = int(input("what is the power of the move: "))
-    movChar = input("is the move physical or special:")
+    for movem in moves:
+        if move == movem["name"]:
+            chosenMove = movem
+            moveType = chosenMove["type"]
+            power = chosenMove["power"]
+            movChar = chosenMove["category"]
+
+
+    # moveType = input("What is the type of the move:")
+    # power = int(input("what is the power of the move: "))
+    # movChar = input("is the move physical or special:")
     # for testing
     # moveType = "grass"
     # power = 45
@@ -648,4 +661,4 @@ def damageCalulator( pokemonA, pokemonB,move):
 
     return totalDamage
 
-print(damageCalulator(pokemonC,pokemonD))
+print(damageCalulator(pokemonC,pokemonD,"fly"))
