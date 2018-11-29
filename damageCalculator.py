@@ -10,16 +10,16 @@ class pokemon:
     moves = []
     level = 0
 
-    def addPokeInfo(self,a,b,c,d,e,f,g,l,h):
-        self.type = a
-        self.hp = b
-        self.attack = c
-        self.defense = d
-        self.specialAttack = e
-        self.specialDefense = f
-        self.speed = g
-        self.moves = h
-        self.level = l
+    def addPokeInfo(self,type,hp,attack,defense,specAttack,specDefense,speed,level,moves):
+        self.type = type
+        self.hp = hp
+        self.attack = attack
+        self.defense = defense
+        self.specialAttack = specAttack
+        self.specialDefense = specDefense
+        self.speed = speed
+        self.moves = moves
+        self.level = level
     def __init__(self,name):
         self.name = name
     def getType(self):
@@ -401,7 +401,12 @@ wrap =  {"name": "wrap",
 
 
 moves = [absorb,acid,auroraBeam,blizzard,bodySlam,boneClub,bodySlam,bonemerang,bubble,
-         bubbleBeam,confusion,crabhammer,cut,dig,dizzyPunch,doubleKick,doubleEdge,drillPeck]
+         bubbleBeam,confusion,crabhammer,cut,dig,dizzyPunch,doubleKick,doubleEdge,drillPeck,earthquake,eggbomb,ember,explosion,fireBlast,firePunch,fireSpin,flamethrower,fly,gust,
+         headbutt,highJumpKick,hornAttack,hydroPump,hyperBeam,hyperFang,iceBeam,icePunch,jumpKick,karateChop,leechLife,lick,megaDrain,megaKick,megaPunch,payDay,peck,
+         petalDance,pinMissile,poisonSting,pound,psybeam,psychic,rage,razorLeaf,razorWind,rockSlide,rockThrow,rollingKick,scratch,selfDestruct,skullBash,skyAttack,slam,slash,
+         sludge,smog,solarBeam,spikeCannon,stomp,strength,struggle,submission,surf,swift,tackle,takeDown,thrash,thunder,thunderbolt,thunderPunch,thunderShock,triAttack,twineedle,
+         waterfall,waterGun,wingAttack,wrap,vineWhip,viceGrip,]
+
 
 
 typeList = ["normal","fight","flying","poison","ground","rock","bug","bug","ghost","fire","water","grass","electric","psychic","ice","dragon"]
@@ -418,9 +423,17 @@ pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
 
 def damageCalulator( pokemonA, pokemonB,move):
 
-    moveType = input("What is the type of the move:")
-    power = int(input("what is the power of the move: "))
-    movChar = input("is the move physical or special:")
+    for movem in moves:
+        if move == movem["name"]:
+            chosenMove = movem
+            moveType = chosenMove["type"]
+            power = chosenMove["power"]
+            movChar = chosenMove["category"]
+
+
+    # moveType = input("What is the type of the move:")
+    # power = int(input("what is the power of the move: "))
+    # movChar = input("is the move physical or special:")
     # for testing
     # moveType = "grass"
     # power = 45
@@ -646,6 +659,7 @@ def damageCalulator( pokemonA, pokemonB,move):
     modifier = weatherbooster * stab * effectiveVariable
     totalDamage = eight * modifier
 
-    return totalDamage
+    print(pokemonC.getName(),  "will do",totalDamage,"damage to ",pokemonD.getName(),"using move",move)
 
-print(damageCalulator(pokemonC,pokemonD))
+
+damageCalulator(pokemonC,pokemonD,"vine whip")
