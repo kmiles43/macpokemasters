@@ -10,16 +10,16 @@ class pokemon:
     moves = []
     level = 0
 
-    def addPokeInfo(self,a,b,c,d,e,f,g,l,h):
-        self.type = a
-        self.hp = b
-        self.attack = c
-        self.defense = d
-        self.specialAttack = e
-        self.specialDefense = f
-        self.speed = g
-        self.moves = h
-        self.level = l
+    def addPokeInfo(self,type,hp,attack,defense,specAttack,specDefense,speed,level,moves):
+        self.type = type
+        self.hp = hp
+        self.attack = attack
+        self.defense = defense
+        self.specialAttack = specAttack
+        self.specialDefense = specDefense
+        self.speed = speed
+        self.moves = moves
+        self.level = level
     def __init__(self,name):
         self.name = name
     def getType(self):
@@ -662,4 +662,4 @@ def damageCalulator( pokemonA, pokemonB,move):
     print(pokemonC.getName(),  "will do",totalDamage,"damage to ",pokemonD.getName(),"using move",move)
 
 
-damageCalulator(pokemonC,pokemonD,"fly")
+damageCalulator(pokemonC,pokemonD,"vine whip")
