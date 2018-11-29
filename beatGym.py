@@ -41,6 +41,8 @@ class pokemon:
         return self.name
     def getLevel(self):
         return self.level
+
+
 class gymLeader:
     name = ""
     listOfPokemon =[]
@@ -54,8 +56,20 @@ class gymLeader:
     def getPokemon(self):
         return self.listOfPokemon
 
+class trainer:
+    name = ""
+    listOfPokemon = []
 
+    def addTrainerInfo(self, pokemon):
+        self.listOfPokemon = pokemon
 
+    def __init__(self, name):
+        self.name = name
+
+    def getPokemon(self):
+        return self.listOfPokemon
+    def addPokemon(self,pokemon):
+        trainer.listOfPokemon.append(pokemon)
 
 # Brock's Pokemon
 
@@ -102,7 +116,7 @@ tangela = pokemon("tangela")
 tangela.addPokeInfo("grass",95,55,115,100,40,60,24,["bind","constrict"])
 
 vileplume = pokemon("vileplume")
-vileplume.addPokeInfo("grass poison",119,80,85,110,90,50)
+vileplume.addPokeInfo("grass poison",119,80,85,110,90,50,29,["petal dance","mega drain","poison powder"])
 
 Erika = gymLeader("Erika")
 Erika.addGymLeaderInfo([victreebel,tangela,vileplume])
@@ -171,3 +185,24 @@ nidoqueen.addPokeInfo("poison ground",154,92,87,75,85,76,44,["scratch","body sla
 
 Giovanni = gymLeader("Giovanni")
 Giovanni.addGymLeaderInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
+
+pokemonTrainerName = input("What is your name?")
+trainer1 = trainer(pokemonTrainerName)
+numPokemon = int(input("How many pokemon are in your party?"))
+
+for i in range(0,numPokemon):
+    pokename = input("What is the pokemon's name?")
+    pokemon1 = pokemon(pokename)
+    pokemonLevel = int(input("What is the Pokemon's level?"))
+    pokemon1.level = pokemonLevel
+    trainer1.addPokemon(pokemon1)
+    print("pokemon added")
+
+
+
+
+answer1 = input("What gym are you facing off against:")
+if answer1 == "pewter" | answer1 == "Pewter":
+    ans = input("Are you trying to beat Brock?")
+    if ans == "yes" | ans == "Yes":
+        print("Which Pokemon wins goes here.")
