@@ -411,7 +411,7 @@ moves = [absorb,acid,auroraBeam,blizzard,bodySlam,boneClub,bodySlam,bonemerang,b
 
 typeList = ["normal","fight","flying","poison","ground","rock","bug","bug","ghost","fire","water","grass","electric","psychic","ice","dragon"]
 pokemonC = pokemon('Bulbasaur')
-pokemonC.addPokeInfo('grass',45,49,49,65,65,45,16,["cut","absorb"])
+pokemonC.addPokeInfo('grass',45,49,49,65,65,45,16,["cut","vineWhip"])
 
 pokemonD = pokemon('Squirtle')
 pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
@@ -442,9 +442,9 @@ def damageCalulator( pokemonA, pokemonB,move):
     target = 1
 
 # Weather factor
-    weather = input("Is the weather rainy, harsh sunlight, or normal: ")
+#     weather = input("Is the weather rainy, harsh sunlight, or normal: ")
     weatherbooster = 0
-    # weather = "normal"
+    weather = "normal"
     if weather =="rainy":
         if pokemonA.getType == "water":
             weatherbooster = 1.5
@@ -461,11 +461,8 @@ def damageCalulator( pokemonA, pokemonB,move):
         weatherbooster = 1
     if pokemonA.getType == moveType :
         stab = 1.5
-
     else:
         stab = 1
-    # if pokemonA[6][0] == moveType:  # only takes first type into account
-    #     stab = 1.5
 #Effectiveness factor
 
     normalTypeNotEffective = ["rock"]
@@ -521,7 +518,6 @@ def damageCalulator( pokemonA, pokemonB,move):
 
     typeA = moveType
     typeB = pokemonB.getType()
-    # typeB = pokemonB[6][0] #this only takes in first one not both
 
     effectiveVariable = 0
 
@@ -646,22 +642,12 @@ def damageCalulator( pokemonA, pokemonB,move):
     specialAttackA = pokemonA.getSPA()
     specialDefenseB = pokemonB.getSPDEF()
     level = pokemonA.getLevel()
-    # attackA = pokemonA[0]
-    # defenseB = pokemonB[1]
-    # specialAttackA = pokemonA[3]
-    # specialDefenseB = pokemonB[4]
-    # level = 1  # hard code level
-
     if movChar == "special":
         attackingPower = specialAttackA
         defensePower = specialDefenseB
-        # attackingPower = float(specialAttackA)
-        # defensePower = float(specialDefenseB)
     else:
         attackingPower = attackA
         defensePower = defenseB
-        # attackingPower = float(attackA)
-        # defensePower = float(defenseB)
 
     one =(2*level)
     two = one/5
@@ -673,8 +659,6 @@ def damageCalulator( pokemonA, pokemonB,move):
     eight = seven+2
     modifier = weatherbooster * stab * effectiveVariable
     totalDamage = eight * modifier
-    # totalDamage=int(totalDamage)
-    # print(pokemonC.getName(),  "will do",totalDamage,"damage to ",pokemonD.getName(),"using move",move)
 
     return totalDamage
 
