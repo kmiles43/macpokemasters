@@ -1,5 +1,6 @@
 from damageCalculator import *
 from pokedex import *
+import math
 
 def generateStats(Pokemon):
     ChosenPokemon=[]
@@ -23,15 +24,24 @@ def headTohead(Pokemon1,Pokemon2,move1,move2):
     attackQueue=Queue()
     hp1=PokemonA[2]
     hp2=PokemonB[2]
-    if PokemonA[5]>PokemonB[5]:
-        attackQueue.enqueue(PokemonA)
-        attackQueue.enqueue(PokemonB)
+    pokeADamage=damageCalulator(PokemonA,PokemonB,move1)
+    pokeBDamage=damageCalulator(PokemonB,PokemonA,move2)
+    PokeATurnsAlive=math.ceil(hp1/pokeBDamage)
+    PokeBTurnsAlive=math.ceil(hp2/pokeADamage)
+    if PokeATurnsAlive>PokeBTurnsAlive:
+        return Pokemon1
+    elif PokeBTurnsAlive>PokeATurnsAlive:
+        return Pokemon2
     else:
-        attackQueue.enqueue(PokemonB)
-        attackQueue.enqueue(PokemonA)
-    damageCalulator(PokemonA,PokemonB,move1)
+        if PokemonA[5]>PokemonB[5]:
+            return Pokemon1
+        else:
+            return Pokemon2
 
-headTohead("Bulbasaur","Squirtle", "swift",0)
+
+print(headTohead("Bulbasaur","Squirtle", "swift","swift"))
+
+
 
 
 

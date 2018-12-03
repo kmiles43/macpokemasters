@@ -422,8 +422,7 @@ pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
 
 
 def damageCalulator( pokemonA, pokemonB,move):
-    print(pokemonA)
-    print(type(pokemonA))
+
     for movem in moves:
         if move == movem["name"]:
             chosenMove = movem
@@ -640,8 +639,6 @@ def damageCalulator( pokemonA, pokemonB,move):
     attackA = pokemonA[0]
     defenseB = pokemonB[1]
     specialAttackA = pokemonA[3]
-    print(specialAttackA)
-    print(type(specialAttackA))
     specialDefenseB = pokemonB[4]
     level = 1                   #hard code level
     if movChar == "special":
@@ -664,5 +661,5 @@ def damageCalulator( pokemonA, pokemonB,move):
     totalDamage=int(totalDamage)
 
     print(pokemonC.getName(),  "will do",totalDamage,"damage to ",pokemonD.getName(),"using move",move)
-
+    return totalDamage
 
