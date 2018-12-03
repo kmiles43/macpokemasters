@@ -14,4 +14,3 @@ def bestMove(poke1,poke2):
                 "damgae": damage}
     return bestMove
 
-print(bestMove(pokemonC,pokemonD))

@@ -196,5 +196,5 @@ for poke in Pokedex:
     stockPokemon.addPokeInfo(typeList,hp,attack,defense,spAttack,spDefense,speed,50,[""])
     genIPokemon.append(stockPokemon)
 
-for pokemon in genIPokemon:
-    print(pokemon.getName())
+# for pokemon in genIPokemon:
+#     print(pokemon.getName())
