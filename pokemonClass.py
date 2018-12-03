@@ -21,9 +21,15 @@ class pokemon:
         self.level = level
     def __init__(self,name):
         self.name = name
+    def addName(self,name):
+        self.name = name
+    def addLevel(self,level):
+        self.level = level
+    def addMoves(self,moves):
+        self.moves = moves
     def getType(self):
         return self.type
-    def gethp(self):
+    def getHp(self):
         return self.hp
     def getAttack(self):
         return self.attack

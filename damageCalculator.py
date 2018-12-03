@@ -3,10 +3,10 @@ from pokemonClass import pokemon
 from Moves import *
 from Effectiveness import *
 
-pokemonC = pokemon('Bulbasaur')
+pokemonC = pokemon("Bulbasaur")
 pokemonC.addPokeInfo('grass',45,49,49,65,65,45,16,["cut","vineWhip"])
 
-pokemonD = pokemon('Squirtle')
+pokemonD = pokemon("Squirtle")
 pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
 
 
@@ -14,14 +14,22 @@ pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
 
 
 
-def damageCalulator( pokemonA, pokemonB,move):
+def damageCalulator(pokemonA, pokemonB,move):
+    helper = False
+    moveType = ""
+    movChar = ""
+    power = 0
 
-    for movem in moves:
-        if move == movem["name"]:
-            chosenMove = movem
+
+    for m in moves:
+        if move == m["name"]:
+            chosenMove = m
             moveType = chosenMove["type"]
             power = chosenMove["power"]
             movChar = chosenMove["category"]
+            helper = True
+            break
+        if helper == True:
             break
 
 
@@ -36,23 +44,23 @@ def damageCalulator( pokemonA, pokemonB,move):
 
 # Weather factor
 #     weather = input("Is the weather rainy, harsh sunlight, or normal: ")
-    weatherbooster = 0
+  # weatherbooster = 0
     weather = "normal"
-    if weather =="rainy":
-        if pokemonA.getType == "water":
+    if weather == "rainy":
+        if pokemonA.getType() == "water":
             weatherbooster = 1.5
-        elif pokemonA.getType == "fire":
+        elif pokemonA.getType() == "fire":
             weatherbooster = .5
         else:
             weatherbooster = 1
     elif weather == "harsh sunlight":
-        if pokemonA.getType == "fire":
+        if pokemonA.getType() == "fire":
             weatherbooster = 1.5
         else:
             weatherbooster = 1
     else:
         weatherbooster = 1
-    if pokemonA.getType == moveType :
+    if moveType in pokemonA.getType():
         stab = 1.5
     else:
         stab = 1
@@ -61,119 +69,119 @@ def damageCalulator( pokemonA, pokemonB,move):
     typeB = pokemonB.getType()
 
     effectiveVariable = 0
+    for type in typeB:
+        if typeA == "normal":
+            if type in normalTypeNotEffective:
+                effectiveVariable = .5
+            elif type in normalTypeNoEffect:
+                effectiveVariable = 0
 
-    if typeA == "normal":
-        if typeB in normalTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in normalTypeNoEffect:
-            effectiveVariable = 0
-
+            else:
+                effectiveVariable = 1
+        elif typeA =="fight":
+            if type in fightTypeNoEffect:
+                effectiveVariable = 0
+            elif type in fightTypeSuperEffective:
+                effectiveVariable = 2
+            elif type in fightTypeNotEffective:
+                effectiveVariable = .5
+            else:
+                effectiveVariable = 1
+        elif typeA =="flying":
+            if type in flyingTypeNotEffective:
+                effectiveVariable = .5
+            elif type in flyingTypeSuperEffective:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA == "poison":
+            if type in poisonTypeNotEffective:
+                effectiveVariable = .5
+            elif type in poisonTypeSuperEffective:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA == "ground":
+            if type in groundTypeSuperEffective:
+                effectiveVariable = 2
+            elif type in groundTypeNotEffective:
+                effectiveVariable = .5
+            elif type in groundTypeNoEffect:
+                effectiveVariable =0
+            else:
+                effectiveVariable = 1
+        elif typeA == "rock":
+            if type in rockTypeNotEffective:
+                effectiveVariable = .5
+            elif type in rockTypeSuperEffective:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA == "bug":
+            if type in bugTypeNotEffective:
+                effectiveVariable = .5
+            elif type in bugTypeSuperEffective:
+                effectiveVariable =2
+            else:
+                effectiveVariable = 1
+        elif typeA =="ghost":
+            if type in ghostTypeNoEffect:
+                effectiveVariable = 0
+            elif type in ghostTypeSuper:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA == "fire":
+            if type in fireTypeSuper:
+                effectiveVariable = 2
+            elif type in fireTypeNotEffective:
+                effectiveVariable = .5
+            else:
+                effectiveVariable = 1
+        elif typeA == "water":
+            if type in waterTypeSuper:
+                effectiveVariable = 2
+            elif type in waterTypeNot:
+                effectiveVariable = .5
+            else:
+                effectiveVariable = 1
+        elif typeA == "grass":
+            if type in grassTypeSuper:
+                effectiveVariable = 2
+            elif type in grassTypeNotEffective:
+                effectiveVariable = .5
+            else:
+                effectiveVariable = 1
+        elif typeA == "electric":
+            if type in electricNoEffect:
+                effectiveVariable =0
+            elif type in electricTypeNotEffective:
+                effectiveVariable =.5
+            elif type in electricTypeSuper:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA =="psychic":
+            if type in psychicTypeNotEffective:
+                effectiveVariable =.5
+            elif type in psychicTypeSuper:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA == "ice":
+            if type in iceTypeNotEffective:
+                effectiveVariable = .5
+            elif type in iceTypeSuper:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
+        elif typeA == "dragon":
+            if type in dragonTypeSuper:
+                effectiveVariable = 2
+            else:
+                effectiveVariable = 1
         else:
-            effectiveVariable = 1
-    elif typeA =="fight":
-        if typeB in fightTypeNoEffect:
-            effectiveVariable = 0
-        elif typeB in fightTypeSuperEffective:
-            effectiveVariable = 2
-        elif typeB in fightTypeNotEffective:
-            effectiveVariable = .5
-        else:
-            effectiveVariable = 1
-    elif typeA =="flying":
-        if typeB in flyingTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in flyingTypeSuperEffective:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA == "poison":
-        if typeB in poisonTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in poisonTypeSuperEffective:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA == "ground":
-        if typeB in groundTypeSuperEffective:
-            effectiveVariable = 2
-        elif typeB in groundTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in groundTypeNoEffect:
-            effectiveVariable =0
-        else:
-            effectiveVariable = 1
-    elif typeA == "rock":
-        if typeB in rockTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in rockTypeSuperEffective:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA == "bug":
-        if typeB in bugTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in bugTypeSuperEffective:
-            effectiveVariable =2
-        else:
-            effectiveVariable = 1
-    elif typeA =="ghost":
-        if typeB in ghostTypeNoEffect:
-            effectiveVariable = 0
-        elif typeB in ghostTypeSuper:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA == "fire":
-        if typeB in fireTypeSuper:
-            effectiveVariable = 2
-        elif typeB in fireTypeNotEffective:
-            effectiveVariable = .5
-        else:
-            effectiveVariable = 1
-    elif typeA == "water":
-        if typeB in waterTypeSuper:
-            effectiveVariable = 2
-        elif typeB in waterTypeNot:
-            effectiveVariable = .5
-        else:
-            effectiveVariable = 1
-    elif typeA == "grass":
-        if typeB in grassTypeSuper:
-            effectiveVariable = 2
-        elif typeB in grassTypeNotEffective:
-            effectiveVariable = .5
-        else:
-            effectiveVariable = 1
-    elif typeA == "electric":
-        if typeB in electricNoEffect:
-            effectiveVariable =0
-        elif typeB in electricTypeNotEffective:
-            effectiveVariable =.5
-        elif typeB in electricTypeSuper:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA =="psychic":
-        if typeB in psychicTypeNotEffective:
-            effectiveVariable =.5
-        elif typeB in psychicTypeSuper:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA == "ice":
-        if typeB in iceTypeNotEffective:
-            effectiveVariable = .5
-        elif typeB in iceTypeSuper:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    elif typeA == "dragon":
-        if typeB in dragonTypeSuper:
-            effectiveVariable = 2
-        else:
-            effectiveVariable = 1
-    else:
-        print("You imputed an invalid type")
+            print("You imputed an invalid type")
 
 
 
@@ -204,6 +212,6 @@ def damageCalulator( pokemonA, pokemonB,move):
     return totalDamage
 
 
-
+print(damageCalulator(pokemonC,pokemonD,"bubble"))
 
 
