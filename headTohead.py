@@ -38,7 +38,7 @@ def headTohead(Pokemon1,Pokemon2,move1,move2):
         else:
             return Pokemon2
 
-
+#yay
 print(headTohead("Bulbasaur","Squirtle", "swift","swift"))
 
 
