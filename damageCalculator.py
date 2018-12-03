@@ -411,7 +411,7 @@ moves = [absorb,acid,auroraBeam,blizzard,bodySlam,boneClub,bodySlam,bonemerang,b
 
 typeList = ["normal","fight","flying","poison","ground","rock","bug","bug","ghost","fire","water","grass","electric","psychic","ice","dragon"]
 pokemonC = pokemon('Bulbasaur')
-pokemonC.addPokeInfo('grass',45,49,49,65,65,45,16,["tackle","vineWhipe"])
+pokemonC.addPokeInfo('grass',45,49,49,65,65,45,16,["cut","absorb"])
 
 pokemonD = pokemon('Squirtle')
 pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
@@ -429,6 +429,7 @@ def damageCalulator( pokemonA, pokemonB,move):
             moveType = chosenMove["type"]
             power = chosenMove["power"]
             movChar = chosenMove["category"]
+            break
 
 
     # moveType = input("What is the type of the move:")
@@ -441,9 +442,9 @@ def damageCalulator( pokemonA, pokemonB,move):
     target = 1
 
 # Weather factor
-    weather = input("Is the weather rainy, harsh sunlight, or normal: ")
+#     weather = input("Is the weather rainy, harsh sunlight, or normal: ")
     weatherbooster = 0
-    # weather = "normal"
+    weather = "normal"
     if weather =="rainy":
         if pokemonA.getType == "water":
             weatherbooster = 1.5
@@ -659,7 +660,21 @@ def damageCalulator( pokemonA, pokemonB,move):
     modifier = weatherbooster * stab * effectiveVariable
     totalDamage = eight * modifier
 
-    print(pokemonC.getName(),  "will do",totalDamage,"damage to ",pokemonD.getName(),"using move",move)
+    return totalDamage
 
 
-damageCalulator(pokemonC,pokemonD,"vine whip")
+def bestMove(poke1,poke2):
+    damage = 0
+    for move in poke1.moves :
+        testing = damageCalulator(poke1,poke2,move)
+        if testing > damage:
+            damage = testing
+            attack = move
+    bestMove = {"name": attack,
+                "damgae": damage}
+    return bestMove
+
+print(bestMove(pokemonC,pokemonD))
+
+
+
