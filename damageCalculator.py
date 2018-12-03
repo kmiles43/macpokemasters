@@ -73,6 +73,7 @@ def damageCalulator(pokemonA, pokemonB,move):
         if typeA == "normal":
             if type in normalTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in normalTypeNoEffect:
                 effectiveVariable = 0
 
@@ -81,103 +82,133 @@ def damageCalulator(pokemonA, pokemonB,move):
         elif typeA =="fight":
             if type in fightTypeNoEffect:
                 effectiveVariable = 0
+                break
             elif type in fightTypeSuperEffective:
                 effectiveVariable = 2
+                break
             elif type in fightTypeNotEffective:
                 effectiveVariable = .5
+                break
             else:
                 effectiveVariable = 1
         elif typeA =="flying":
             if type in flyingTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in flyingTypeSuperEffective:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "poison":
             if type in poisonTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in poisonTypeSuperEffective:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "ground":
             if type in groundTypeSuperEffective:
                 effectiveVariable = 2
+                break
             elif type in groundTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in groundTypeNoEffect:
                 effectiveVariable =0
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "rock":
             if type in rockTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in rockTypeSuperEffective:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "bug":
             if type in bugTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in bugTypeSuperEffective:
                 effectiveVariable =2
+                break
             else:
                 effectiveVariable = 1
         elif typeA =="ghost":
             if type in ghostTypeNoEffect:
                 effectiveVariable = 0
+                break
             elif type in ghostTypeSuper:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "fire":
             if type in fireTypeSuper:
                 effectiveVariable = 2
+                break
             elif type in fireTypeNotEffective:
                 effectiveVariable = .5
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "water":
             if type in waterTypeSuper:
                 effectiveVariable = 2
+                break
             elif type in waterTypeNot:
                 effectiveVariable = .5
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "grass":
             if type in grassTypeSuper:
                 effectiveVariable = 2
+                break
             elif type in grassTypeNotEffective:
                 effectiveVariable = .5
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "electric":
             if type in electricNoEffect:
                 effectiveVariable =0
+                break
             elif type in electricTypeNotEffective:
                 effectiveVariable =.5
+                break
             elif type in electricTypeSuper:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA =="psychic":
             if type in psychicTypeNotEffective:
                 effectiveVariable =.5
+                break
             elif type in psychicTypeSuper:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "ice":
             if type in iceTypeNotEffective:
                 effectiveVariable = .5
+                break
             elif type in iceTypeSuper:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         elif typeA == "dragon":
             if type in dragonTypeSuper:
                 effectiveVariable = 2
+                break
             else:
                 effectiveVariable = 1
         else:
@@ -212,6 +243,6 @@ def damageCalulator(pokemonA, pokemonB,move):
     return totalDamage
 
 
-print(damageCalulator(pokemonC,pokemonD,"bubble"))
+# print(damageCalulator(pokemonC,pokemonD,"bubble"))
 
 
