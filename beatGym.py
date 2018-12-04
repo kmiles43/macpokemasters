@@ -143,6 +143,9 @@ nidoqueen.addPokeInfo("poison ground",154,92,87,75,85,76,44,["scratch","body sla
 Giovanni = gymLeader("Giovanni")
 Giovanni.addGymLeaderInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
 
+#Lorelei
+
+
 pokemonTrainerName = input("What is your name?")
 trainer1 = trainer(pokemonTrainerName)
 numPokemon = int(input("How many pokemon are in your party?"))
