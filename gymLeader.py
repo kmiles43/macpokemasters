@@ -146,20 +146,20 @@ Giovanni.addGymLeaderInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
 pokemonTrainerName = input("What is your name?")
 trainer1 = trainer(pokemonTrainerName)
 numPokemon = int(input("How many pokemon are in your party?"))
-
-for i in range(0,numPokemon):
-    pokename = input("What is the pokemon's name?")
-    pokemon1 = pokemon(pokename)
-    pokemonLevel = int(input("What is the Pokemon's level?"))
-    pokemon1.level = pokemonLevel
-    trainer1.addPokemon(pokemon1)
-    print("pokemon added")
-
-
+#
+# for i in range(0,numPokemon):
+#     pokename = input("What is the pokemon's name?")
+#     pokemon1 = pokemon(pokename)
+#     pokemonLevel = int(input("What is the Pokemon's level?"))
+#     pokemon1.level = pokemonLevel
+#     trainer1.addPokemon(pokemon1)
+#     print("pokemon added")
 
 
-answer1 = input("What gym are you facing off against:")
-if answer1 == "pewter" | answer1 == "Pewter":
-    ans = input("Are you trying to beat Brock?")
-    if ans == "yes" | ans == "Yes":
-        print("Which Pokemon wins goes here.")
+
+#
+# answer1 = input("What gym are you facing off against:")
+# if answer1 == "pewter" | answer1 == "Pewter":
+#     ans = input("Are you trying to beat Brock?")
+#     if ans == "yes" | ans == "Yes":
+#         print("Which Pokemon wins goes here.")

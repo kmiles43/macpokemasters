@@ -2,6 +2,12 @@ from pokemonClass import pokemon
 from damageCalculator import *
 
 
+pokemonC = pokemon("Bulbasaur")
+pokemonC.addPokeInfo('grass',45,49,49,65,65,45,16,["cut","vineWhip"])
+
+pokemonD = pokemon("Squirtle")
+pokemonD.addPokeInfo('water',44,48,65,50,64,45,12,["water gun"])
+
 
 def bestMove(poke1,poke2):
     damage = 0
@@ -13,4 +19,3 @@ def bestMove(poke1,poke2):
     bestMove = {"name": attack,
                 "damgae": damage}
     return bestMove
-
