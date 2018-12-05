@@ -196,5 +196,13 @@ for poke in Pokedex:
     stockPokemon.addPokeInfo(typeList,hp,attack,defense,spAttack,spDefense,speed,50,[""])
     genIPokemon.append(stockPokemon)
 
+def getPokeStats(poke1):
+    for poke in genIPokemon:
+        pokemonIndex = poke.getName()
+        if poke1 == pokemonIndex:
+            poke2 = poke
+            return poke2
+
+
 # for pokemon in genIPokemon:
 #     print(pokemon.getName())

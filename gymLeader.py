@@ -1,4 +1,5 @@
 from pokemonClass import pokemon
+from pokedex import getPokeStats
 
 class gymLeader:
     name = ""
@@ -142,6 +143,92 @@ nidoqueen.addPokeInfo("poison ground",154,92,87,75,85,76,44,["scratch","body sla
 
 Giovanni = gymLeader("Giovanni")
 Giovanni.addGymLeaderInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
+
+#Lorelei
+dewgong = getPokeStats('Dewgong')
+dewgong.addMoves(["aurora beam","take down"])
+
+cloyster = getPokeStats("Cloyster")
+cloyster.addMoves(["clamp","aurora beam"])
+
+slowbro = getPokeStats("Slowbro")
+slowbro.addMoves(["water gun"])
+
+jynx = getPokeStats("Jynx")
+jynx.addMoves(["double slap","ice punch","body slam","thrash"])
+
+lapras = getPokeStats("Lapras")
+lapras.addMoves(["body slam","hydro pump","blizard"])
+
+Lorelei = gymLeader("Lorelei")
+Lorelei.addGymLeaderInfo([dewgong,cloyster,slowbro,jynx,lapras])
+
+
+# Bruno
+
+onixBruno = getPokeStats("Onix")
+onixBruno.addMoves(["rock throw","rage","slam"])
+
+hitmonchan = getPokeStats("Hitmonchan")
+hitmonchan.addMoves(["ice punch","fire punch","thunderpunch","counter"])
+
+hitmonlee = getPokeStats("Hitmonlee")
+hitmonlee.addMoves(["jump kick","hi jump kick","mega kick"])
+
+onixBruno2 = getPokeStats("Onix")
+onixBruno2.addMoves(["rock throw","rage","slam"])
+
+machamp = getPokeStats("Machamp")
+machamp.addMoves(["Fissure","submission"])
+
+Bruno = gymLeader("Bruno")
+Bruno.addGymLeaderInfo([onixBruno,hitmonchan,hitmonlee,onixBruno2,machamp])
+
+#Agatha
+gengar = getPokeStats("Gengar")
+gengar.addMoves("night shade")
+
+golbat = getPokeStats("Golbat")
+golbat.addMoves(["wing attack"])
+
+haunter = getPokeStats("Haunter")
+haunter.addMoves(["night shade"])
+
+arbok = getPokeStats("Arbok")
+arbok.addMoves(["bite","acid"])
+
+gengar2 = getPokeStats("Gengar")
+gengar2.addMoves(["night shade","toxic"])
+
+Agatha = gymLeader("Agatha")
+Agatha.addGymLeaderInfo([gengar,golbat,haunter,arbok,gengar2])
+
+#Lance
+gyarados = getPokeStats("Gyarados")
+gyarados.addMoves(["hydro pump","hyper beam"])
+
+drangonair = getPokeStats("Dragonair")
+drangonair.addMoves(["slam","hyper beam"])
+
+aerodactyl = getPokeStats("Aerodactyl")
+aerodactyl.addMoves(["take down","bite","hyper beam"])
+
+dragonite = getPokeStats("Dragonite")
+dragonite.addMoves(["slam","hyper beam"])
+
+Lance = gymLeader("Lance")
+Lance.addGymLeaderInfo([gyarados,drangonair,drangonair,aerodactyl,dragonite])
+
+
+
+
+
+
+
+
+
+
+
 
 pokemonTrainerName = input("What is your name?")
 trainer1 = trainer(pokemonTrainerName)
