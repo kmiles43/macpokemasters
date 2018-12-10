@@ -2,17 +2,17 @@ from pokedex import getPokeStats
 from pokemonClass import pokemon
 from damageCalculator import *
 from bestMove import bestMove
-from beatGym import trainer
-from headTohead import oneVone
-from headTohead import hpLeft
+from Trainers import trainer
+from OnevOne import oneVone
+from OnevOne import hpLeft
 from OurStack import Stack
-from beatGym import Bruno
-from beatGym import Brock
+from Trainers import Bruno
+from Trainers import Brock
 # from Queue import Queue
-from beatGym import Sabrina
+from Trainers import Sabrina
 from OurStack import Stack
-from beatGym import Josh
-from beatGym import Kiante
+from Trainers import Josh
+from Trainers import Kiante
 
 def fight(trainer1, trainer2):
 
