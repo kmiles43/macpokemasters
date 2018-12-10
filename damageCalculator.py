@@ -21,7 +21,7 @@ def damageCalulator(pokemonA, pokemonB,move):
     power = 0
 
 
-    for m in moves:
+    for m in AllMoves:
         if move == m["name"]:
             chosenMove = m
             moveType = chosenMove["type"]

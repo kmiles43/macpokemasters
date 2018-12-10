@@ -356,12 +356,12 @@ wrap =  {"name": "wrap",
 
 
 
-moves = [absorb,acid,auroraBeam,blizzard,bodySlam,boneClub,bodySlam,bonemerang,bubble,
-         bubbleBeam,confusion,crabhammer,cut,dig,dizzyPunch,doubleKick,doubleEdge,drillPeck,earthquake,eggbomb,ember,explosion,fireBlast,firePunch,fireSpin,flamethrower,fly,gust,
-         headbutt,highJumpKick,hornAttack,hydroPump,hyperBeam,hyperFang,iceBeam,icePunch,jumpKick,karateChop,leechLife,lick,megaDrain,megaKick,megaPunch,payDay,peck,
-         petalDance,pinMissile,poisonSting,pound,psybeam,psychic,rage,razorLeaf,razorWind,rockSlide,rockThrow,rollingKick,scratch,selfDestruct,skullBash,skyAttack,slam,slash,
-         sludge,smog,solarBeam,spikeCannon,stomp,strength,struggle,submission,surf,swift,tackle,takeDown,thrash,thunder,thunderbolt,thunderPunch,thunderShock,triAttack,twineedle,
-         waterfall,waterGun,wingAttack,wrap,vineWhip,viceGrip,]
+AllMoves = [absorb, acid, auroraBeam, blizzard, bodySlam, boneClub, bodySlam, bonemerang, bubble,
+            bubbleBeam, confusion, crabhammer, cut, dig, dizzyPunch, doubleKick, doubleEdge, drillPeck, earthquake, eggbomb, ember, explosion, fireBlast, firePunch, fireSpin, flamethrower, fly, gust,
+            headbutt, highJumpKick, hornAttack, hydroPump, hyperBeam, hyperFang, iceBeam, icePunch, jumpKick, karateChop, leechLife, lick, megaDrain, megaKick, megaPunch, payDay, peck,
+            petalDance, pinMissile, poisonSting, pound, psybeam, psychic, rage, razorLeaf, razorWind, rockSlide, rockThrow, rollingKick, scratch, selfDestruct, skullBash, skyAttack, slam, slash,
+            sludge, smog, solarBeam, spikeCannon, stomp, strength, struggle, submission, surf, swift, takeDown, thrash, thunder, thunderbolt, thunderPunch, thunderShock, triAttack, twineedle,
+            waterfall, waterGun, wingAttack, wrap, vineWhip, viceGrip, tackle]
 
 
 

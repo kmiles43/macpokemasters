@@ -1,24 +1,13 @@
 from pokemonClass import pokemon
 from pokedex import getPokeStats
 
-class gymLeader:
-    name = ""
-    listOfPokemon =[]
 
-    def addGymLeaderInfo(self,pokemon):
-        self.listOfPokemon = pokemon
-
-    def __init__(self, name):
-        self.name = name
-
-    def getPokemon(self):
-        return self.listOfPokemon
 
 class trainer:
     name = ""
     listOfPokemon = []
 
-    def addTrainerInfo(self, pokemon):
+    def addtrainerInfo(self, pokemon):
         self.listOfPokemon = pokemon
 
     def __init__(self, name):
@@ -28,121 +17,140 @@ class trainer:
         return self.listOfPokemon
     def addPokemon(self,pokemon):
         trainer.listOfPokemon.append(pokemon)
+#TEST
+Kiante = trainer("Kiante")
+bulbasaur = getPokeStats('Bulbasaur')
+bulbasaurb = getPokeStats('Bulbasaur')
+bulbasaur.addMoves(["absorb","cut"])
+bulbasaurb.addMoves(["absorb","cut"])
+bulbasaur.addLevel(12)
+bulbasaurb.addLevel(17)
+Kiante.addtrainerInfo([bulbasaurb, bulbasaur])
 
+Josh = trainer("Josh")
+s = getPokeStats("Squirtle")
+ss = getPokeStats("Wartortle")
+s.addMoves(["bubble","bubble beam"])
+ss.addMoves(["bubble","bubble"])
+s.addLevel(1)
+ss.addLevel(2)
+Josh.addtrainerInfo([s, ss])
 # Brock's Pokemon
 
-geodudeB = pokemon('geodude')
-geodudeB.addPokeInfo("rock ground",44,80,100,30,30,20,12,["tackle","defense curl"])
+geodudeB = getPokeStats("Geodude")
+geodudeB.addLevel(12)
+geodudeB.addMoves(["tackle"])
 
-onixB = pokemon("onix")
-onixB.addPokeInfo("rock ground",42,45,160,30,45,70,14,["tackle","bind","rock tomb"])
+onixB = getPokeStats("Onix")
+onixB.addMoves(["tackle"])
+onixB.addLevel(14)
 
-Brock = gymLeader("Brock")
-Brock.addGymLeaderInfo([geodudeB,onixB])
+Brock = trainer("Brock")
+Brock.addtrainerInfo([geodudeB, onixB])
 
 # Misty
 
-staryuM = pokemon("staryu")
+staryuM = pokemon("Staryu")
 staryuM.addPokeInfo("water",43,45,55,70,55,85,18,["tackle","water gun"])
 
-starmieM = pokemon("starmie")
+starmieM = pokemon("Starmie")
 starmieM.addPokeInfo("water",83,75,85,100,85,115,21,["water gun","bubble beam"])
 
-Misty = gymLeader("Misty")
-Misty.addGymLeaderInfo([staryuM,starmieM])
+Misty = trainer("Misty")
+Misty.addtrainerInfo([staryuM,starmieM])
 
 # Lt Surge
 
-voltorbS = pokemon("voltorb")
+voltorbS = pokemon("Voltorb")
 voltorbS.addPokeInfo("electric",58,30,50,55,55,100,21,["tackle","sonicBoom"])
 
-pikachuS = pokemon('pikachu')
+pikachuS = pokemon('Pikachu')
 pikachuS.addPokeInfo("electric",48,55,40,50,50,90,18,["thunderShock","quick attack"])
 
-raichuS = pokemon("raichu")
+raichuS = pokemon("Raichu")
 raichuS.addPokeInfo("electric",88,90,55,90,80,110,24,["thunderbolt","thunderShock"])
 
-Surge = gymLeader("Lt Surge")
-Surge.addGymLeaderInfo([voltorbS,pikachuS,raichuS])
+Surge = trainer("Lt Surge")
+Surge.addtrainerInfo([voltorbS,pikachuS,raichuS])
 
 # Erika
 
-victreebel = pokemon("victreebel")
+victreebel = pokemon("Victreebel")
 victreebel.addPokeInfo("grass poison",126,105,65,100,70,70,29,["razor leaf","wrap"])
 
-tangela = pokemon("tangela")
+tangela = pokemon("Tangela")
 tangela.addPokeInfo("grass",95,55,115,100,40,60,24,["bind","constrict"])
 
-vileplume = pokemon("vileplume")
+vileplume = pokemon("Vileplume")
 vileplume.addPokeInfo("grass poison",119,80,85,110,90,50,29,["petal dance","mega drain","poison powder"])
 
-Erika = gymLeader("Erika")
-Erika.addGymLeaderInfo([victreebel,tangela,vileplume])
+Erika = trainer("Erika")
+Erika.addtrainerInfo([victreebel,tangela,vileplume])
 
 # Koga
 
-koffing = pokemon("koffing")
+koffing = pokemon("Koffing")
 koffing.addPokeInfo("poison",73,65,95,60,45,35,37,["tackle","smog","sludge"])
 
-muk = pokemon('muk')
+muk = pokemon('Muk')
 muk.addPokeInfo("poison",177,105,75,65,100,50,39,["poison gas","sludge"])
 
-Koga = gymLeader("Koga")
-Koga.addGymLeaderInfo([koffing,muk])
+Koga = trainer("Koga")
+Koga.addtrainerInfo([koffing,muk])
 
 # Sabrina
 
-kadabra = pokemon("kadabra")
+kadabra = pokemon("Kadabra")
 kadabra.addPokeInfo("psychic",74,35,30,120,70,105,38,["psybeam","psychic"])
 
 mrMime = pokemon("Mr. Mime")
-mrMime.addPokeInfo("psychic",73,45,65,100,120,90,37,["confusion","doubleSlap"])
+mrMime.addPokeInfo("psychic",73,45,65,100,120,90,37,["confusion"])
 
-venomoth = pokemon("venomoth")
-venomoth.addPokeInfo("poison bug",121,65,60,90,75,90,38,["poisonPowder","leech ife","psybeam"])
+venomoth = pokemon("Venomoth")
+venomoth.addPokeInfo("poison bug",121,65,60,90,75,90,38,["leech life","psybeam"])
 
-alakazam = pokemon("alakazam")
-alakazam.addPokeInfo("psychic",99,50,45,135,95,120,43,["psybeam","psywave"])
+alakazam = pokemon("Alakazam")
+alakazam.addPokeInfo("psychic",99,50,45,135,95,120,43,["psybeam"])
 
-sabrina = gymLeader("Sabrina")
-sabrina.addGymLeaderInfo([kadabra,mrMime,venomoth,alakazam])
+Sabrina = trainer("Sabrina")
+Sabrina.addtrainerInfo([kadabra,mrMime,venomoth,alakazam])
 
 # Blaine
 
-growlithe = pokemon("growlithe")
+growlithe = pokemon("Growlithe")
 growlithe.addPokeInfo("fire",99,70,45,70,50,60,42,["ember","take down"])
 
-ponyta = pokemon("ponyta")
+ponyta = pokemon("Ponyta")
 ponyta.addPokeInfo("fire",91,85,55,65,65,90,40,["stomp","fire spin"])
 
-rapidash = pokemon("rapidash")
+rapidash = pokemon("Rapidash")
 rapidash.addPokeInfo("fire",115,100,70,80,80,105,42,["stomp","fire spin"])
 
-arcanine = pokemon("arcanine")
+arcanine = pokemon("Arcanine")
 arcanine.addPokeInfo("fire",154,110,80,100,80,95,47,["ember","fire blast","take down"])
 
-Blaine = gymLeader("Blaine")
-Blaine.addGymLeaderInfo([growlithe,ponyta,rapidash,arcanine])
+Blaine = trainer("Blaine")
+Blaine.addtrainerInfo([growlithe,ponyta,rapidash,arcanine])
 
 # Giovanni
 
-rhyhorn = pokemon("rhyhorn")
+rhyhorn = pokemon("Rhyhorn")
 rhyhorn.addPokeInfo("ground rock",138,85,95,30,30,25,45,["stomp,""fury attack","horn drill"])
 
-rhydon = pokemon("rhydon")
+rhydon = pokemon("Rhydon")
 rhydon.addPokeInfo("ground rock",178,130,120,45,45,40,50,["stomp","horn drill","fissure"])
 
-nidoking = pokemon("nidoking")
+nidoking = pokemon("Nidoking")
 nidoking.addPokeInfo("poison ground",140,102,77,85,75,85,45,["tackle","horn attack","poison sting","thrash"])
 
-dugtrio = pokemon("dugtrio")
+dugtrio = pokemon("Dugtrio")
 dugtrio.addPokeInfo("ground",67,100,50,50,70,120,42,["dig","slash"])
 
-nidoqueen = pokemon("nidoqueen")
+nidoqueen = pokemon("Nidoqueen")
 nidoqueen.addPokeInfo("poison ground",154,92,87,75,85,76,44,["scratch","body slam","poison sting"])
 
-Giovanni = gymLeader("Giovanni")
-Giovanni.addGymLeaderInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
+Giovanni = trainer("Giovanni")
+Giovanni.addtrainerInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
 
 #Lorelei
 dewgong = getPokeStats('Dewgong')
@@ -160,8 +168,8 @@ jynx.addMoves(["double slap","ice punch","body slam","thrash"])
 lapras = getPokeStats("Lapras")
 lapras.addMoves(["body slam","hydro pump","blizard"])
 
-Lorelei = gymLeader("Lorelei")
-Lorelei.addGymLeaderInfo([dewgong,cloyster,slowbro,jynx,lapras])
+Lorelei = trainer("Lorelei")
+Lorelei.addtrainerInfo([dewgong,cloyster,slowbro,jynx,lapras])
 
 
 # Bruno
@@ -181,8 +189,8 @@ onixBruno2.addMoves(["rock throw","rage","slam"])
 machamp = getPokeStats("Machamp")
 machamp.addMoves(["Fissure","submission"])
 
-Bruno = gymLeader("Bruno")
-Bruno.addGymLeaderInfo([onixBruno,hitmonchan,hitmonlee,onixBruno2,machamp])
+Bruno = trainer("Bruno")
+Bruno.addtrainerInfo([onixBruno,hitmonchan,hitmonlee,onixBruno2,machamp])
 
 #Agatha
 gengar = getPokeStats("Gengar")
@@ -200,8 +208,8 @@ arbok.addMoves(["bite","acid"])
 gengar2 = getPokeStats("Gengar")
 gengar2.addMoves(["night shade","toxic"])
 
-Agatha = gymLeader("Agatha")
-Agatha.addGymLeaderInfo([gengar,golbat,haunter,arbok,gengar2])
+Agatha = trainer("Agatha")
+Agatha.addtrainerInfo([gengar,golbat,haunter,arbok,gengar2])
 
 #Lance
 gyarados = getPokeStats("Gyarados")
@@ -216,8 +224,8 @@ aerodactyl.addMoves(["take down","bite","hyper beam"])
 dragonite = getPokeStats("Dragonite")
 dragonite.addMoves(["slam","hyper beam"])
 
-Lance = gymLeader("Lance")
-Lance.addGymLeaderInfo([gyarados,drangonair,drangonair,aerodactyl,dragonite])
+Lance = trainer("Lance")
+Lance.addtrainerInfo([gyarados,drangonair,drangonair,aerodactyl,dragonite])
 
 
 
@@ -229,24 +237,24 @@ Lance.addGymLeaderInfo([gyarados,drangonair,drangonair,aerodactyl,dragonite])
 
 
 
-
-pokemonTrainerName = input("What is your name?")
-trainer1 = trainer(pokemonTrainerName)
-numPokemon = int(input("How many pokemon are in your party?"))
-
-for i in range(0,numPokemon):
-    pokename = input("What is the pokemon's name?")
-    pokemon1 = pokemon(pokename)
-    pokemonLevel = int(input("What is the Pokemon's level?"))
-    pokemon1.level = pokemonLevel
-    trainer1.addPokemon(pokemon1)
-    print("pokemon added")
-
-
-
-
-answer1 = input("What gym are you facing off against:")
-if answer1 == "pewter" | answer1 == "Pewter":
-    ans = input("Are you trying to beat Brock?")
-    if ans == "yes" | ans == "Yes":
-        print("Which Pokemon wins goes here.")
+#
+# pokemontrainerName = input("What is your name?")
+# trainer1 = trainer(pokemontrainerName)
+# numPokemon = int(input("How many pokemon are in your party?"))
+#
+# for i in range(0,numPokemon):
+#     pokename = input("What is the pokemon's name?")
+#     pokemon1 = pokemon(pokename)
+#     pokemonLevel = int(input("What is the Pokemon's level?"))
+#     pokemon1.level = pokemonLevel
+#     trainer1.addPokemon(pokemon1)
+#     print("pokemon added")
+#
+#
+#
+#
+# answer1 = input("What gym are you facing off against:")
+# if answer1 == "pewter" | answer1 == "Pewter":
+#     ans = input("Are you trying to beat Brock?")
+#     if ans == "yes" | ans == "Yes":
+#         print("Which Pokemon wins goes here.")

@@ -3,10 +3,10 @@ from damageCalculator import *
 
 
 
-def bestMove(poke1,poke2):
+def bestMove(mon1,mon2):
     damage = 0
-    for move in poke1.moves :
-        testing = damageCalulator(poke1,poke2,move)
+    for move in mon1.moves :
+        testing = damageCalulator(mon1,mon2,move)
         if testing > damage:
             damage = testing
             attack = move
