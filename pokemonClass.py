@@ -9,7 +9,6 @@ class pokemon:
     moves = []
     level = 0
 
-
     def addPokeInfo(self,type,hp,attack,defense,specAttack,specDefense,speed,level,moves):
         self.type = type
         self.hp = hp
