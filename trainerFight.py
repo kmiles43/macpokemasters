@@ -21,8 +21,7 @@ def fight(trainer1, trainer2):
 
     array1 = trainer1.getPokemon()
     array2 = trainer2.getPokemon()
-    print(len(array1))
-    print(len(array2))
+
     # array3 = []
     for i in range(len(array1)-1, -1, -1):
         trainer1Party.push(array1[i])
@@ -34,12 +33,14 @@ def fight(trainer1, trainer2):
     #     print(item.getName())
     poke1 = trainer1Party.pop()
     print(poke1.moves)
+
     for move in poke1.moves:
         if move in AllMoves:
             print("The move is in AllMoves")
         else:
             print("the move is not there")
     poke2 = trainer2Party.pop()
+    print(poke2)
 
     while trainer1Party.size() > 0 and trainer2Party.size() > 0:
 

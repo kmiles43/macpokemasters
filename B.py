@@ -9,35 +9,39 @@ from Moves import AllMoves
 def B():
     trainerName = input("What is your name?")
     userTrainer = trainer(trainerName)
-    partySixe = int(input("What is the size of your party"))
+    partySize = int(input("What is the size of your party"))
     print("Start with the first pokemon in your party and continue through your last for the following")
-    for x in range(0, partySixe):
+    # userTrainer = trainer("Wolf")
+    # partySize = 2
+    for x in range(0, partySize ):
         partyPokeName = input("What is the pokemon's name?")
-        if partyPokeName in genIPokemon:
-            partyPoke = getPokeStats(partyPokeName)
-            partyPokeMovesArray = []
-            partyPokemonLevel = int(input("What is this pokemon's level?"))
-            partyPoke.addLevel(partyPokemonLevel)
-            partyPokeMove1 = input("What's a move that this pokemon has that does damage?")
-            if partyPokeMove1 in AllMoves:
-                partyPokeMovesArray.append(partyPokeMove1)
-                areThereMore = input("Is there another? y/n?")
-                if areThereMore == "y" or areThereMore == "Y":
-                    howMany = int(input("How many?"))
-                    i = 0
-                    while i < howMany:
-                        partyPokeMoves = input("What's another move that this pokemon has that does damage?")
-                        if partyPokeMoves in AllMoves:
-                            partyPokeMovesArray.append(partyPokeMoves)
-                        else:
-                            print("You've entered a wrong Move")
-                        i = i + 1
-            partyPoke.addMoves(partyPokeMovesArray)
-            userTrainer.addPokemon(partyPoke)
-        else:
-            print("The pokemon you've entered isn't in Gen I.")
+        # partyPokeName = "Bulbasaur"
+        partyPoke = getPokeStats(partyPokeName)
+        partyPokeMovesArray = []
+        partyPokemonLevel = int(input("What is this pokemon's level?"))
+        # partyPokemonLevel = 100
+        partyPoke.addLevel(partyPokemonLevel)
+        partyPokeMove1 = input("What's a move that this pokemon has that does damage?")
+        # partyPokeMove1 = "absorb"
+        partyPokeMovesArray.append(partyPokeMove1)
+        areThereMore = input("Is there another? y/n?")
+        # areThereMore = "y"
+        if areThereMore == "y" or areThereMore == "Y":
+            howMany = int(input("How many?"))
+            howMany = 1
+            i = 0
+            while i < howMany:
+                partyPokeMoves = input("What's another move that this pokemon has that does damage?")
+                # partyPokeMoves = "acid"
+                partyPokeMovesArray.append(partyPokeMoves)
+                i = i + 1
+                break
+
+        partyPoke.addMoves(partyPokeMovesArray)
+        userTrainer.addPokemon(partyPoke)
+
     gym1 = fight(Brock, userTrainer)
-    if gym1 == userTrainer:
+    if gym1 == userTrainer.name:
         gym2 = fight(Misty, userTrainer)
         if gym2 == userTrainer:
             gym3 = fight(Surge, userTrainer)
