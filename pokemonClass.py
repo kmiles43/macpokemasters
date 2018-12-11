@@ -27,6 +27,8 @@ class pokemon:
         self.level = level
     def addMoves(self,moves):
         self.moves = moves
+    def editMoves(self,move):
+        self.moves.append(move)
     def addHp(self,Hp):
         self.hp = Hp
     def getType(self):

@@ -57,4 +57,3 @@ def fight(trainer1, trainer2):
         elif trainer2Party.isEmpty():
             return trainer1.name
 
-print(fight(Brock,Kiante))

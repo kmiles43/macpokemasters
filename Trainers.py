@@ -50,104 +50,128 @@ Brock.addtrainerInfo([geodudeB, onixB])
 
 # Misty
 
-staryuM = pokemon("Staryu")
-staryuM.addPokeInfo("water",43,45,55,70,55,85,18,["tackle","water gun"])
+staryuM = getPokeStats("Staryu")
+staryuM.addLevel(18)
+staryuM.addMoves(["tackle","water gun"])
 
-starmieM = pokemon("Starmie")
-starmieM.addPokeInfo("water",83,75,85,100,85,115,21,["water gun","bubble beam"])
+starmieM = getPokeStats("Starmie")
+starmieM.addLevel(21)
+starmieM.addMoves(["water gun","bubble beam"])
 
 Misty = trainer("Misty")
 Misty.addtrainerInfo([staryuM,starmieM])
 
 # Lt Surge
 
-voltorbS = pokemon("Voltorb")
-voltorbS.addPokeInfo("electric",58,30,50,55,55,100,21,["tackle","sonicBoom"])
+voltorbS = getPokeStats("Voltorb")
+voltorbS.addLevel(21)
+voltorbS.addMoves(["tackle","sonicBoom"])
 
-pikachuS = pokemon('Pikachu')
-pikachuS.addPokeInfo("electric",48,55,40,50,50,90,18,["thunderShock","quick attack"])
+pikachuS = getPokeStats('Pikachu')
+pikachuS.addLevel(18)
+pikachuS.addMoves(["thunderShock","quick attack"])
 
-raichuS = pokemon("Raichu")
-raichuS.addPokeInfo("electric",88,90,55,90,80,110,24,["thunderbolt","thunderShock"])
+raichuS = getPokeStats("Raichu")
+raichuS.addMoves(["thunderbolt","thunderShock"])
+raichuS.addLevel(24)
 
 Surge = trainer("Lt Surge")
 Surge.addtrainerInfo([voltorbS,pikachuS,raichuS])
 
 # Erika
 
-victreebel = pokemon("Victreebel")
-victreebel.addPokeInfo("grass poison",126,105,65,100,70,70,29,["razor leaf","wrap"])
+victreebel = getPokeStats("Victreebel")
+victreebel.addMoves(["razor leaf","wrap"])
+victreebel.addLevel(29)
 
-tangela = pokemon("Tangela")
-tangela.addPokeInfo("grass",95,55,115,100,40,60,24,["bind","constrict"])
+tangela = getPokeStats("Tangela")
+tangela.addLevel(24)
+tangela.addMoves(["bind","constrict"])
 
-vileplume = pokemon("Vileplume")
-vileplume.addPokeInfo("grass poison",119,80,85,110,90,50,29,["petal dance","mega drain","poison powder"])
+vileplume = getPokeStats("Vileplume")
+vileplume.addMoves(["petal dance","mega drain","poison powder"])
+vileplume.addLevel(29)
 
 Erika = trainer("Erika")
 Erika.addtrainerInfo([victreebel,tangela,vileplume])
 
 # Koga
 
-koffing = pokemon("Koffing")
-koffing.addPokeInfo("poison",73,65,95,60,45,35,37,["tackle","smog","sludge"])
+koffing = getPokeStats("Koffing")
+koffing.addLevel(37)
+koffing.addMoves(["tackle","smog","sludge"])
 
-muk = pokemon('Muk')
-muk.addPokeInfo("poison",177,105,75,65,100,50,39,["poison gas","sludge"])
+muk = getPokeStats('Muk')
+muk.addMoves(["poison gas","sludge"])
+muk.addLevel(39)
+
 
 Koga = trainer("Koga")
 Koga.addtrainerInfo([koffing,muk])
 
 # Sabrina
 
-kadabra = pokemon("Kadabra")
-kadabra.addPokeInfo("psychic",74,35,30,120,70,105,38,["psybeam","psychic"])
+kadabra = getPokeStats("Kadabra")
+kadabra.addLevel(38)
+kadabra.addMoves(["psybeam","psychic"])
 
-mrMime = pokemon("Mr. Mime")
-mrMime.addPokeInfo("psychic",73,45,65,100,120,90,37,["confusion"])
+mrMime = getPokeStats("Mr. Mime")
+mrMime.addLevel(37)
+mrMime.addMoves(["confusion"])
 
-venomoth = pokemon("Venomoth")
-venomoth.addPokeInfo("poison bug",121,65,60,90,75,90,38,["leech life","psybeam"])
+venomoth = getPokeStats("Venomoth")
+venomoth.addLevel(38)
+venomoth.addMoves(["leech life","psybeam"])
 
-alakazam = pokemon("Alakazam")
-alakazam.addPokeInfo("psychic",99,50,45,135,95,120,43,["psybeam"])
+alakazam = getPokeStats("Alakazam")
+alakazam.addLevel(43)
+alakazam.addMoves(["psybeam"])
 
 Sabrina = trainer("Sabrina")
 Sabrina.addtrainerInfo([kadabra,mrMime,venomoth,alakazam])
 
 # Blaine
 
-growlithe = pokemon("Growlithe")
-growlithe.addPokeInfo("fire",99,70,45,70,50,60,42,["ember","take down"])
+growlithe = getPokeStats("Growlithe")
+growlithe.addLevel(43)
+growlithe.addMoves(["ember","take down"])
 
-ponyta = pokemon("Ponyta")
-ponyta.addPokeInfo("fire",91,85,55,65,65,90,40,["stomp","fire spin"])
+ponyta = getPokeStats("Ponyta")
+ponyta.addLevel(42)
+ponyta.addMoves(["stomp","fire spin"])
 
-rapidash = pokemon("Rapidash")
-rapidash.addPokeInfo("fire",115,100,70,80,80,105,42,["stomp","fire spin"])
+rapidash = getPokeStats("Rapidash")
+rapidash.addLevel(42)
+rapidash.addMoves(["stomp","fire spin"])
 
-arcanine = pokemon("Arcanine")
-arcanine.addPokeInfo("fire",154,110,80,100,80,95,47,["ember","fire blast","take down"])
+arcanine = getPokeStats("Arcanine")
+arcanine.addLevel(47)
+arcanine.addMoves(["ember","fire blast","take down"])
 
 Blaine = trainer("Blaine")
 Blaine.addtrainerInfo([growlithe,ponyta,rapidash,arcanine])
 
 # Giovanni
 
-rhyhorn = pokemon("Rhyhorn")
-rhyhorn.addPokeInfo("ground rock",138,85,95,30,30,25,45,["stomp,""fury attack","horn drill"])
+rhyhorn = getPokeStats("Rhyhorn")
+rhyhorn.addLevel(45)
+rhyhorn.addMoves(["stomp,""fury attack","horn drill"])
 
-rhydon = pokemon("Rhydon")
-rhydon.addPokeInfo("ground rock",178,130,120,45,45,40,50,["stomp","horn drill","fissure"])
+rhydon = getPokeStats("Rhydon")
+rhydon.addLevel(50)
+rhydon.addMoves(["stomp","horn drill","fissure"])
 
-nidoking = pokemon("Nidoking")
-nidoking.addPokeInfo("poison ground",140,102,77,85,75,85,45,["tackle","horn attack","poison sting","thrash"])
+nidoking = getPokeStats("Nidoking")
+nidoking.addLevel(45)
+nidoking.addMoves(["tackle","horn attack","poison sting","thrash"])
 
-dugtrio = pokemon("Dugtrio")
-dugtrio.addPokeInfo("ground",67,100,50,50,70,120,42,["dig","slash"])
+dugtrio = getPokeStats("Dugtrio")
+dugtrio.addLevel(42)
+dugtrio.addMoves(["dig","slash"])
 
-nidoqueen = pokemon("Nidoqueen")
-nidoqueen.addPokeInfo("poison ground",154,92,87,75,85,76,44,["scratch","body slam","poison sting"])
+nidoqueen = getPokeStats("Nidoqueen")
+nidoqueen.addLevel(44)
+nidoqueen.addMoves(["scratch","body slam","poison sting"])
 
 Giovanni = trainer("Giovanni")
 Giovanni.addtrainerInfo([rhydon,rhydon,nidoking,nidoqueen,dugtrio])
@@ -237,24 +261,4 @@ Lance.addtrainerInfo([gyarados,drangonair,drangonair,aerodactyl,dragonite])
 
 
 
-#
-# pokemontrainerName = input("What is your name?")
-# trainer1 = trainer(pokemontrainerName)
-# numPokemon = int(input("How many pokemon are in your party?"))
-#
-# for i in range(0,numPokemon):
-#     pokename = input("What is the pokemon's name?")
-#     pokemon1 = pokemon(pokename)
-#     pokemonLevel = int(input("What is the Pokemon's level?"))
-#     pokemon1.level = pokemonLevel
-#     trainer1.addPokemon(pokemon1)
-#     print("pokemon added")
-#
-#
-#
-#
-# answer1 = input("What gym are you facing off against:")
-# if answer1 == "pewter" | answer1 == "Pewter":
-#     ans = input("Are you trying to beat Brock?")
-#     if ans == "yes" | ans == "Yes":
-#         print("Which Pokemon wins goes here.")
+
