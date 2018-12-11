@@ -151,9 +151,8 @@ pokemonNames = {
     "mewtwo":3,
     "mew":45,
 }
-def pokeCaptureGenI(maxHp):
+def pokeCaptureGenI(maxHp,name):
     capture = False
-    name = input('Which Pokemon are you trying to catch?')
     if name in pokemonNames:
         captureRate = pokemonNames[name]
         status = input('What is the status of the pokemon: ')
@@ -200,10 +199,9 @@ def pokeCaptureGenI(maxHp):
         R2 = random.randrange(0,255)
         if R2 <= F:
             capture = True
-            return capture
+
+            return capture, "You will catch it"
         else:
-            return capture
+            return capture, "The pokemon will break free"
     else:
         print("name input error")
-
-print(pokeCaptureGenI(50))
