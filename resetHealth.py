@@ -1,13 +1,12 @@
 from pokedex import genIPokemon
 from pokedex import getPokeStats
+from pokemonClass import pokemon
 
 def resetHealth(trainersPokemon):
-    list = trainersPokemon.getPokemon()
-    holder = []
-    for pokemon in list:
-        name =pokemon.getName()
-        poke = getPokeStats(name)
-        holder.append(poke)
-    trainersPokemon.addPokemon(holder)
-
+    pokeList = trainersPokemon.listOfPokemon
+    storage = []
+    for pokemon in pokeList:
+        poke = getPokeStats(pokemon.name)
+        storage.append(poke)
+    trainersPokemon.addPokemon(storage)
 

@@ -44,31 +44,31 @@ def B():
     if gym1 == userTrainer.name:
         resetHealth(userTrainer)
         gym2 = fight(Misty, userTrainer)
-        if gym2 == userTrainer:
+        if gym2 == userTrainer.name:
             resetHealth(userTrainer)
             gym3 = fight(Surge, userTrainer)
-            if gym3 == userTrainer:
+            if gym3 == userTrainer.name:
                 resetHealth(userTrainer)
                 gym4 = fight(Erika, userTrainer)
-                if gym4 == userTrainer:
+                if gym4 == userTrainer.name:
                     resetHealth(userTrainer)
                     gym5 = fight(Koga, userTrainer)
-                    if gym5 == userTrainer:
+                    if gym5 == userTrainer.name:
                         resetHealth(userTrainer)
                         gym6 = fight(Sabrina, userTrainer)
-                        if gym6 == userTrainer:
+                        if gym6 == userTrainer.name:
                             resetHealth(userTrainer)
                             gym7 = fight(Blaine, userTrainer)
-                            if gym7 == userTrainer:
+                            if gym7 == userTrainer.name:
                                 resetHealth(userTrainer)
                                 gym8 = fight(Giovanni, userTrainer)
-                                if gym8 == userTrainer:
+                                if gym8 == userTrainer.name:
                                     resetHealth(userTrainer)
                                     elitefour1 = fight(Lorelei, userTrainer)
                                     elitefour2 = fight(Bruno, userTrainer)
                                     elitefour3 = fight(Agatha, userTrainer)
                                     elitefour4 = fight(Lance, userTrainer)
-                                    if elitefour1 and elitefour2 and elitefour3 and elitefour4 == userTrainer:
+                                    if elitefour1 and elitefour2 and elitefour3 and elitefour4 == userTrainer.name:
                                         print("Congrats you're a pokemon Master and can beat anyone!")
                                     else:
                                         print("You can obtain all 8 gym badges!")

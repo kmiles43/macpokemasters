@@ -50,13 +50,13 @@ Brock.addtrainerInfo([geodudeB, onixB])
 
 # Misty
 
-staryuM = getPokeStats("Staryu")
+staryuM = getPokeStats("Squirtle")
 staryuM.addLevel(18)
-staryuM.addMoves(["tackle","water gun"])
+staryuM.addMoves(["bubble"])
 
-starmieM = getPokeStats("Starmie")
+starmieM = getPokeStats("Wartortle")
 starmieM.addLevel(21)
-starmieM.addMoves(["water gun","bubble beam"])
+starmieM.addMoves(["bubble beam"])
 
 Misty = trainer("Misty")
 Misty.addtrainerInfo([staryuM,starmieM])

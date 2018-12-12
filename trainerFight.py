@@ -1,6 +1,5 @@
 
 from OnevOne import oneVone
-from OnevOne import hpLeft
 from OurStack import Stack
 
 
@@ -36,12 +35,9 @@ def fight(trainer1, trainer2):
 
 
         winner = oneVone(poke1,poke2)
-        hplefterover1 = hpLeft(poke1,poke2)
         if winner == poke1:
-            poke1.addHp(hplefterover1)
             poke2 = trainer2Party.pop()
         elif winner == poke2:
-            poke2.addHp(hplefterover1)
             poke1 = trainer1Party.pop()
         if trainer1Party.isEmpty():
             return trainer2.name
