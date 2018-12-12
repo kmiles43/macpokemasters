@@ -11,6 +11,14 @@ auroraBeam = {"name": "aurora beam",
               "type":"ice",
               "category":"special",
               "power":65}
+bind = {"name": "bind",
+        "type": "normal",
+        "category": "physical",
+        "power":20}
+bite = {"name": "bite",
+        "type":"normal",
+        "category":"physical",
+        "power":60}
 blizzard = {"name": "blizzard",
               "type":"ice",
               "category":"special",
@@ -35,6 +43,10 @@ bubbleBeam = {"name": "bubble beam",
               "type":"water",
               "category":"special",
               "power":65}
+clamp = {"name": "clamp",
+         "type": "normal",
+         "category": "physical",
+         "power":30}
 confusion = {"name": "confusion",
               "type":"psychic",
               "category":"special",
@@ -112,7 +124,7 @@ headbutt = {"name": "headbutt",
               "type":"normal",
               "category":"physical",
               "power":70}
-highJumpKick = {"name": "high jump kick",
+highJumpKick = {"name": "hi jump kick",
               "type":"fight",
               "category":"physical",
               "power":120}
@@ -168,6 +180,10 @@ megaPunch =  {"name": "mega punch",
              "type": "fight",
              "category": "physical",
              "power":80}
+nightShade = {"name": "night shade",
+              "type": "ghost",
+              "category":"special",
+              "power":  70}
 payDay =  {"name": "pay day",
              "type": "normal",
              "category": "physical",
@@ -200,10 +216,10 @@ psychic =  {"name": "psychic",
              "type": "psychic",
              "category": "special",
              "power":90}
-quickAttack =  {"name":"quick attack",
-             "type": "normal",
-             "category": "physical",
-             "power":40}
+quickAttack = {"name": "quickattack",
+               "type": "normal",
+               "category": "physical",
+               "power":40}
 rage =  {"name": "rage",
              "type": "normal",
              "category": "physical",
@@ -256,10 +272,10 @@ sludge =  {"name": "sludge",
              "type": "poison",
              "category": "special",
              "power":65}
-smog =  {"name": "smog",
-             "type": "poison",
-             "category": "special",
-             "power":30}
+smog = {"name": "smog",
+        "type": "poison",
+        "category": "special",
+        "power":30}
 solarBeam =  {"name": "solar beam",
              "type": "grass",
              "category": "special",
@@ -356,12 +372,12 @@ wrap =  {"name": "wrap",
 
 
 
-AllMoves = [absorb, acid, auroraBeam, blizzard, bodySlam, boneClub, bodySlam, bonemerang, bubble,
+AllMoves = [absorb, acid, auroraBeam, blizzard, bodySlam, boneClub, bodySlam, bonemerang, bubble,bind,
             bubbleBeam, confusion, crabhammer, cut, dig, dizzyPunch, doubleKick, doubleEdge, drillPeck, earthquake, eggbomb, ember, explosion, fireBlast, firePunch, fireSpin, flamethrower, fly, gust,
             headbutt, highJumpKick, hornAttack, hydroPump, hyperBeam, hyperFang, iceBeam, icePunch, jumpKick, karateChop, leechLife, lick, megaDrain, megaKick, megaPunch, payDay, peck,
             petalDance, pinMissile, poisonSting, pound, psybeam, psychic, rage, razorLeaf, razorWind, rockSlide, rockThrow, rollingKick, scratch, selfDestruct, skullBash, skyAttack, slam, slash,
             sludge, smog, solarBeam, spikeCannon, stomp, strength, struggle, submission, surf, swift, takeDown, thrash, thunder, thunderbolt, thunderPunch, thunderShock, triAttack, twineedle,
-            waterfall, waterGun, wingAttack, wrap, vineWhip, viceGrip, tackle]
+            waterfall, waterGun, wingAttack, wrap, vineWhip, viceGrip, tackle, bite, quickAttack, nightShade]
 
 
 

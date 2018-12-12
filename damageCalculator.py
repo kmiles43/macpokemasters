@@ -29,6 +29,7 @@ def damageCalulator(pokemonA, pokemonB,move):
             movChar = chosenMove["category"]
             helper = True
             break
+
         if helper == True:
             break
 
@@ -212,6 +213,7 @@ def damageCalulator(pokemonA, pokemonB,move):
             else:
                 effectiveVariable = 1
         else:
+
             print("You imputed an invalid type")
 
 

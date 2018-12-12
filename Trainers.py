@@ -17,6 +17,8 @@ class trainer:
         return self.listOfPokemon
     def addPokemon(self,pokemon):
         trainer.listOfPokemon.append(pokemon)
+    def newPokemon(self,pokemon):
+        self.listOfPokemon = pokemon
 #TEST
 Kiante = trainer("Kiante")
 bulbasaur = getPokeStats('Bulbasaur')
@@ -37,12 +39,12 @@ ss.addLevel(2)
 Josh.addtrainerInfo([s, ss])
 # Brock's Pokemon
 
-geodudeB = getPokeStats("Bulbasaur")
+geodudeB = getPokeStats("Geodude")
 geodudeB.addLevel(12)
-geodudeB.addMoves(["absorb"])
+geodudeB.addMoves(["tackle"])
 
-onixB = getPokeStats("Bulbasaur")
-onixB.addMoves(["absorb"])
+onixB = getPokeStats("Onix")
+onixB.addMoves(["tackle"])
 onixB.addLevel(14)
 
 Brock = trainer("Brock")
@@ -50,13 +52,13 @@ Brock.addtrainerInfo([geodudeB, onixB])
 
 # Misty
 
-staryuM = getPokeStats("Squirtle")
+staryuM = getPokeStats("Staryu")
 staryuM.addLevel(18)
-staryuM.addMoves(["bubble"])
+staryuM.addMoves(["water gun"])
 
-starmieM = getPokeStats("Wartortle")
+starmieM = getPokeStats("Starmie")
 starmieM.addLevel(21)
-starmieM.addMoves(["bubble beam"])
+starmieM.addMoves(["bubble beam","water gun"])
 
 Misty = trainer("Misty")
 Misty.addtrainerInfo([staryuM,starmieM])
@@ -65,14 +67,14 @@ Misty.addtrainerInfo([staryuM,starmieM])
 
 voltorbS = getPokeStats("Voltorb")
 voltorbS.addLevel(21)
-voltorbS.addMoves(["tackle","sonicBoom"])
+voltorbS.addMoves(["tackle"])
 
 pikachuS = getPokeStats('Pikachu')
 pikachuS.addLevel(18)
-pikachuS.addMoves(["thunderShock","quick attack"])
+pikachuS.addMoves(["quickattack","thunder shock"])
 
 raichuS = getPokeStats("Raichu")
-raichuS.addMoves(["thunderbolt","thunderShock"])
+raichuS.addMoves(["thunderbolt","thunder shock"])
 raichuS.addLevel(24)
 
 Surge = trainer("Lt Surge")
@@ -86,10 +88,10 @@ victreebel.addLevel(29)
 
 tangela = getPokeStats("Tangela")
 tangela.addLevel(24)
-tangela.addMoves(["bind","constrict"])
+tangela.addMoves(["bind"])
 
 vileplume = getPokeStats("Vileplume")
-vileplume.addMoves(["petal dance","mega drain","poison powder"])
+vileplume.addMoves(["petal dance","mega drain"])
 vileplume.addLevel(29)
 
 Erika = trainer("Erika")
@@ -102,7 +104,7 @@ koffing.addLevel(37)
 koffing.addMoves(["tackle","smog","sludge"])
 
 muk = getPokeStats('Muk')
-muk.addMoves(["poison gas","sludge"])
+muk.addMoves(["sludge"])
 muk.addLevel(39)
 
 
@@ -155,11 +157,11 @@ Blaine.addtrainerInfo([growlithe,ponyta,rapidash,arcanine])
 
 rhyhorn = getPokeStats("Rhyhorn")
 rhyhorn.addLevel(45)
-rhyhorn.addMoves(["stomp,""fury attack","horn drill"])
+rhyhorn.addMoves(["stomp","horn drill"])
 
 rhydon = getPokeStats("Rhydon")
 rhydon.addLevel(50)
-rhydon.addMoves(["stomp","horn drill","fissure"])
+rhydon.addMoves(["stomp"])
 
 nidoking = getPokeStats("Nidoking")
 nidoking.addLevel(45)
@@ -190,7 +192,7 @@ jynx = getPokeStats("Jynx")
 jynx.addMoves(["double slap","ice punch","body slam","thrash"])
 
 lapras = getPokeStats("Lapras")
-lapras.addMoves(["body slam","hydro pump","blizard"])
+lapras.addMoves(["body slam","hydro pump","blizzard"])
 
 Lorelei = trainer("Lorelei")
 Lorelei.addtrainerInfo([dewgong,cloyster,slowbro,jynx,lapras])
@@ -202,7 +204,7 @@ onixBruno = getPokeStats("Onix")
 onixBruno.addMoves(["rock throw","rage","slam"])
 
 hitmonchan = getPokeStats("Hitmonchan")
-hitmonchan.addMoves(["ice punch","fire punch","thunderpunch","counter"])
+hitmonchan.addMoves(["ice punch","fire punch","thunderpunch"])
 
 hitmonlee = getPokeStats("Hitmonlee")
 hitmonlee.addMoves(["jump kick","hi jump kick","mega kick"])
@@ -211,7 +213,7 @@ onixBruno2 = getPokeStats("Onix")
 onixBruno2.addMoves(["rock throw","rage","slam"])
 
 machamp = getPokeStats("Machamp")
-machamp.addMoves(["Fissure","submission"])
+machamp.addMoves(["submission"])
 
 Bruno = trainer("Bruno")
 Bruno.addtrainerInfo([onixBruno,hitmonchan,hitmonlee,onixBruno2,machamp])
@@ -230,7 +232,7 @@ arbok = getPokeStats("Arbok")
 arbok.addMoves(["bite","acid"])
 
 gengar2 = getPokeStats("Gengar")
-gengar2.addMoves(["night shade","toxic"])
+gengar2.addMoves(["night shade"])
 
 Agatha = trainer("Agatha")
 Agatha.addtrainerInfo([gengar,golbat,haunter,arbok,gengar2])
