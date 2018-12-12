@@ -7,32 +7,32 @@ from Moves import AllMoves
 
 
 def B():
-    # trainerName = input("What is your name?")
-    # userTrainer = trainer(trainerName)
-    # partySize = int(input("What is the size of your party"))
-    # print("Start with the first pokemon in your party and continue through your last for the following")
-    userTrainer = trainer("Wolf")
-    partySize = 3
+    trainerName = input("What is your name?")
+    userTrainer = trainer(trainerName)
+    partySize = int(input("What is the size of your party"))
+    print("Start with the first pokemon in your party and continue through your last for the following")
+    # userTrainer = trainer("Wolf")
+    # partySize = 3
     for x in range(0, partySize ):
-        # partyPokeName = input("What is the pokemon's name?")
-        partyPokeName = "Venusaur"
+        partyPokeName = input("What is the pokemon's name?")
+        # partyPokeName = "Venusaur"
         partyPoke = getPokeStats(partyPokeName)
         partyPokeMovesArray = []
-        # partyPokemonLevel = int(input("What is this pokemon's level?"))
-        partyPokemonLevel = 100
+        partyPokemonLevel = int(input("What is this pokemon's level?"))
+        # partyPokemonLevel = 100
         partyPoke.addLevel(partyPokemonLevel)
-        # partyPokeMove1 = input("What's a move that this pokemon has that does damage?")
-        partyPokeMove1 = "absorb"
+        partyPokeMove1 = input("What's a move that this pokemon has that does damage?")
+        # partyPokeMove1 = "absorb"
         partyPokeMovesArray.append(partyPokeMove1)
-        # areThereMore = input("Is there another? y/n?")
-        areThereMore = "y"
+        areThereMore = input("Is there another? y/n?")
+        # areThereMore = "y"
         if areThereMore == "y" or areThereMore == "Y":
-            # howMany = int(input("How many?"))
-            howMany = 1
+            howMany = int(input("How many?"))
+            # howMany = 1
             i = 0
             while i < howMany:
-                # partyPokeMoves = input("What's another move that this pokemon has that does damage?")
-                partyPokeMoves = "acid"
+                partyPokeMoves = input("What's another move that this pokemon has that does damage?")
+                # partyPokeMoves = "acid"
                 partyPokeMovesArray.append(partyPokeMoves)
                 i = i + 1
                 break
