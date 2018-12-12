@@ -36,8 +36,10 @@ def oneVone(pokemon1,pokemon2):
 
     hp1 = poke1.getHp()
     hp2 = poke2.getHp()
-    poke1Damage = damageCalulator(poke1,poke2,move1["name"])
-    poke2Damage = damageCalulator(poke2,poke1,move2["name"])
+    # poke1Damage = damageCalulator(poke1,poke2,move1["name"])
+    # poke2Damage = damageCalulator(poke2,poke1,move2["name"])
+    poke1Damage = move1["damage"]
+    poke2Damage = move2["damage"]
     poke1TurnsAlive = math.ceil(hp1/poke2Damage)
     poke2TurnsAlive = math.ceil(hp2/poke1Damage)
 
@@ -77,8 +79,10 @@ def hpLeft(pokemon1,pokemon2):
 
     hp1 = poke1.getHp()
     hp2 = poke2.getHp()
-    poke1Damage = damageCalulator(poke1, poke2, move1["name"])
-    poke2Damage = damageCalulator(poke2, poke1, move2["name"])
+    # poke1Damage = damageCalulator(poke1, poke2, move1["name"])
+    # poke2Damage = damageCalulator(poke2, poke1, move2["name"])
+    poke1Damage = move1["damage"]
+    poke2Damage = move2["damage"]
     poke1TurnsAlive = math.ceil(hp1 / poke2Damage)
     poke2TurnsAlive = math.ceil(hp2 / poke1Damage)
     hp1Left = hp1 - poke1TurnsAlive * poke2Damage

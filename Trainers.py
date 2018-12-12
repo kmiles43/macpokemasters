@@ -37,13 +37,13 @@ ss.addLevel(2)
 Josh.addtrainerInfo([s, ss])
 # Brock's Pokemon
 
-geodudeB = getPokeStats("Squirtle")
-geodudeB.addLevel(1)
+geodudeB = getPokeStats("Bulbasaur")
+geodudeB.addLevel(12)
 geodudeB.addMoves(["absorb"])
 
-onixB = getPokeStats("Squirtle")
+onixB = getPokeStats("Bulbasaur")
 onixB.addMoves(["absorb"])
-onixB.addLevel(1)
+onixB.addLevel(14)
 
 Brock = trainer("Brock")
 Brock.addtrainerInfo([geodudeB, onixB])

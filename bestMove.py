@@ -11,6 +11,6 @@ def bestMove(mon1,mon2):
             damage = testing
             attack = move
     bestMove = {"name": attack,
-                "damgae": damage}
+                "damage": damage}
     return bestMove
 

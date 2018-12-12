@@ -1,18 +1,8 @@
-from pokedex import getPokeStats
-from pokemonClass import pokemon
-from damageCalculator import *
-from bestMove import bestMove
-from Trainers import trainer
+
 from OnevOne import oneVone
 from OnevOne import hpLeft
 from OurStack import Stack
-from Trainers import Bruno
-from Trainers import Brock
-# from Queue import Queue
-from Trainers import Sabrina
-from OurStack import Stack
-from Trainers import Josh
-from Trainers import Kiante
+
 
 def fight(trainer1, trainer2):
 
@@ -32,15 +22,15 @@ def fight(trainer1, trainer2):
     # for item in array3:
     #     print(item.getName())
     poke1 = trainer1Party.pop()
-    print(poke1.moves)
+    # print(poke1.moves)
 
-    for move in poke1.moves:
-        if move in AllMoves:
-            print("The move is in AllMoves")
-        else:
-            print("the move is not there")
+    # for move in poke1.moves:
+    #     if move in AllMoves:
+    #         print("The move is in AllMoves")
+    #     else:
+    #         print("the move is not there")
     poke2 = trainer2Party.pop()
-    print(poke2)
+    # print(poke2)
 
     while trainer1Party.size() > 0 and trainer2Party.size() > 0:
 
