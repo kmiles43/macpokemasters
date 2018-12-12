@@ -1,4 +1,3 @@
-from pokemonClass import pokemon
 from damageCalculator import *
 
 

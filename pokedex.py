@@ -195,6 +195,10 @@ for poke in Pokedex:
     stockPokemon.addName(name)
     stockPokemon.addPokeInfo(typeList,hp,attack,defense,spAttack,spDefense,speed,50,[""])
     genIPokemon.append(stockPokemon)
+pokeNames = []
+for poke in Pokedex:
+    name = poke[0]
+    pokeNames.append(name)
 
 def getPokeStats(poke1):
     for poke in genIPokemon:

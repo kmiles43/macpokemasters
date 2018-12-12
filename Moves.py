@@ -378,6 +378,10 @@ AllMoves = [absorb, acid, auroraBeam, blizzard, bodySlam, boneClub, bodySlam, bo
             petalDance, pinMissile, poisonSting, pound, psybeam, psychic, rage, razorLeaf, razorWind, rockSlide, rockThrow, rollingKick, scratch, selfDestruct, skullBash, skyAttack, slam, slash,
             sludge, smog, solarBeam, spikeCannon, stomp, strength, struggle, submission, surf, swift, takeDown, thrash, thunder, thunderbolt, thunderPunch, thunderShock, triAttack, twineedle,
             waterfall, waterGun, wingAttack, wrap, vineWhip, viceGrip, tackle, bite, quickAttack, nightShade]
+moveNames = []
+for move in AllMoves:
+    name = move["name"]
+    moveNames.append(name)
 
 
 

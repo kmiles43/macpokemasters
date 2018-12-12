@@ -5,7 +5,7 @@ from D import D
 
 
 def mainPoke():
-    ans1 = "B"
+    ans1 = "C"
     # ans1 = input("What would you like to do: "
     #              " A.Find out if you could catch a pokemon"
     #              " B.See how many badges you could obtain with your current party"
